@@ -29,7 +29,7 @@ public class CursorMovement : MonoBehaviour
 
         transform.position = new Vector2(x, y);
 
-        _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+        _angle = Mathf.Atan2(_direction.y, _direction.x);
     }
 
     public int GetQuadrant()
@@ -37,22 +37,22 @@ public class CursorMovement : MonoBehaviour
         float adjustedAngle = _angle;
         if (adjustedAngle < 0)
         {
-            adjustedAngle += 360;
+            adjustedAngle += 2 * Mathf.PI;
         }
 
-        if (adjustedAngle >= 45 && adjustedAngle < 135)
+        if (adjustedAngle >= Mathf.PI / 4 && adjustedAngle < 3 * Mathf.PI / 4)
         {
             return 1;
         }
-        else if (adjustedAngle >= 135 && adjustedAngle < 225)
+        else if (adjustedAngle >= 3 * Mathf.PI / 4 && adjustedAngle < 5 * Mathf.PI / 4)
         {
             return 2;
         }
-        else if (adjustedAngle >= 225 && adjustedAngle < 315)
+        else if (adjustedAngle >= 5 * Mathf.PI / 4 && adjustedAngle < 7 * Mathf.PI / 4)
         {
             return 3;
         }
-        else // adjustedAngle >= 315 or adjustedAngle < 45
+        else // adjustedAngle >= 7 * Mathf.PI / 4 or adjustedAngle < Mathf.PI / 4
         {
             return 4;
         }
