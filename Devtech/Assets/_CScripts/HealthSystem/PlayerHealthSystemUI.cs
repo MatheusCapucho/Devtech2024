@@ -14,11 +14,17 @@ public class PlayerHealthSystemUI : MonoBehaviour
 
     private void Awake()
     {
+        if (GameManager.MoreLifeMonument)
+        {
+            transform.GetChild(3).gameObject.SetActive(true);
+        }
         images = GetComponentsInChildren<Image>();
+
         foreach (Image image in images)
         {
             image.sprite = lifeSprite;
         }
+      
     }
 
     private void OnEnable()
