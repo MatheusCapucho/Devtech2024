@@ -76,3 +76,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Interact: 0
+  _playerAttack: {fileID: 0}
