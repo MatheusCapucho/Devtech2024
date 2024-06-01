@@ -223,6 +223,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 693707624147168841, guid: 8a3ba10ec0e8ec04e835d82f0638f216, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1171534078019427423, guid: 8a3ba10ec0e8ec04e835d82f0638f216, type: 3}
       propertyPath: m_Name
       value: Player
@@ -267,10 +271,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6092062432986132325, guid: 8a3ba10ec0e8ec04e835d82f0638f216, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842020649380124274, guid: 8a3ba10ec0e8ec04e835d82f0638f216, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9142564827275892663, guid: 8a3ba10ec0e8ec04e835d82f0638f216, type: 3}
       propertyPath: OnAttackPerformed
       value: 
       objectReference: {fileID: 11400000, guid: ae9c8412823d8674fafef9da0da58563, type: 2}
+    - target: {fileID: 9162878035558865406, guid: 8a3ba10ec0e8ec04e835d82f0638f216, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
