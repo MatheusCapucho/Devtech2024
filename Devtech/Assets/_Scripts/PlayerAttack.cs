@@ -22,11 +22,15 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (InputManager.Attack)
+        if (InputManager2.Attack)
         {
-            int quadrant = _cursor.GetComponent<CursorMovement>().GetQuadrant();
-            Debug.Log("Quadrant: " + quadrant);
-            OnAttackPerformed.Raise(this, quadrant);
         }
+    }
+
+    public void AttackPerformed()
+    {
+        int quadrant = _cursor.GetComponent<CursorMovement>().GetQuadrant();
+        Debug.Log("Quadrant: " + quadrant);
+        OnAttackPerformed.Raise(this, quadrant);
     }
 }

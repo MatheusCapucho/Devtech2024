@@ -35,6 +35,5 @@ public class InputManager : MonoBehaviour
         Movement = _moveAction.ReadValue<Vector2>();
         MousePosition = Mouse.current.position.ReadValue();
         Attack = _attackAction.triggered;
-        Debug.Log("Attack: " + Attack);
     }
 }
