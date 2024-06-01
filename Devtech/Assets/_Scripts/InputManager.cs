@@ -4,11 +4,13 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     public static Vector2 Movement;
+    public static bool Attack;
     public Vector2 MousePosition { get; private set; }
     public static InputManager Instance { get; private set; }
 
     private PlayerInput _playerInput;
     private InputAction _moveAction;
+    private InputAction _attackAction;
 
     private void Awake()
     {
@@ -25,12 +27,13 @@ public class InputManager : MonoBehaviour
         _playerInput = GetComponent<PlayerInput>();
 
         _moveAction = _playerInput.actions["Move"];
+        _attackAction = _playerInput.actions["Attack"];
     }
 
     private void Update()
     {
         Movement = _moveAction.ReadValue<Vector2>();
         MousePosition = Mouse.current.position.ReadValue();
-        Debug.Log(MousePosition);
+        Attack = _attackAction.triggered;
     }
 }

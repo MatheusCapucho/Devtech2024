@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 24519041}
   - component: {fileID: 24519040}
   m_Layer: 0
-  m_Name: Cursor
+  m_Name: AimCursor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 2037162359}
   - component: {fileID: 2037162358}
   - component: {fileID: 2037162362}
+  - component: {fileID: 2037162363}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -552,6 +553,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+--- !u!114 &2037162363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037162357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26e613d7546f174dba307cd7db69086, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cursor: {fileID: 24519038}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CursorMovement : MonoBehaviour
 {
@@ -10,7 +7,7 @@ public class CursorMovement : MonoBehaviour
     [SerializeField] private GameObject _player;
     private Vector2 _playerPosition;
     private Vector2 _direction;
-    [SerializeField] private float _radius = 2;
+    [SerializeField] private float _radius;
     private float _angle;
 
     private void Awake()
@@ -32,6 +29,32 @@ public class CursorMovement : MonoBehaviour
 
         transform.position = new Vector2(x, y);
 
-        _angle = Mathf.Atan2(_direction.y, _direction.x);
+        _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+    }
+
+    public int GetQuadrant()
+    {
+        float adjustedAngle = _angle;
+        if (adjustedAngle < 0)
+        {
+            adjustedAngle += 360;
+        }
+
+        if (adjustedAngle >= 45 && adjustedAngle < 135)
+        {
+            return 1;
+        }
+        else if (adjustedAngle >= 135 && adjustedAngle < 225)
+        {
+            return 2;
+        }
+        else if (adjustedAngle >= 225 && adjustedAngle < 315)
+        {
+            return 3;
+        }
+        else // adjustedAngle >= 315 or adjustedAngle < 45
+        {
+            return 4;
+        }
     }
 }
