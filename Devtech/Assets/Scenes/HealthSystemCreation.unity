@@ -1245,8 +1245,8 @@ GameObject:
   - component: {fileID: 1863256341}
   - component: {fileID: 1863256340}
   - component: {fileID: 1863256343}
-  - component: {fileID: 1863256344}
   - component: {fileID: 1863256345}
+  - component: {fileID: 1863256346}
   m_Layer: 0
   m_Name: Enemy-Generic
   m_TagString: Enemy
@@ -1359,23 +1359,10 @@ MonoBehaviour:
   Velocity: 1
   AttackCD: 2
   AttackDamage: 1
-  Range: 1.25
+  Range: 4.36
   ObstacleMask:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &1863256344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863256339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 829631505074a904299044911e797a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPrefab: {fileID: 476005573115870675, guid: 5988868fa9102c34b867fa6021057ba6, type: 3}
 --- !u!114 &1863256345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1389,6 +1376,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
+--- !u!114 &1863256346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863256339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06db378e77e99d4489c7b9e117da9f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7475372829164754410, guid: 258800b18903b6148ba3e49c469d03a4, type: 3}
 --- !u!1 &1871359763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,7 +1655,7 @@ Transform:
   m_GameObject: {fileID: 2074772637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.97, z: 0}
+  m_LocalPosition: {x: -4.37, y: -3.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1719,6 +1719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  invulnerabilityTime: 0.5
 --- !u!50 &2074772642
 Rigidbody2D:
   serializedVersion: 4
