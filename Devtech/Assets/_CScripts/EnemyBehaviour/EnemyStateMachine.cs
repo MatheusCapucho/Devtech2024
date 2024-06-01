@@ -13,6 +13,10 @@ public class EnemyStateMachine : MonoBehaviour
     public float Range = .3f;
     public LayerMask ObstacleMask;
 
+    [Header("LootRelated")]
+    [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private int coinAmount;
+
     private EnemyBaseState currentState;
     public EnemyChaseState chaseState = new EnemyChaseState();
     public EnemyAttackState attackState = new EnemyAttackState();
@@ -54,6 +58,15 @@ public class EnemyStateMachine : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, (playerTransform.position - transform.position).normalized, Range, ObstacleMask);
         return (hit.collider != null) ? false : true;
+    }
+
+    public void InstantiateLoot()
+    {
+        int p = 1;
+        for(int i = 0; i < coinAmount; i++)
+        {
+            Instantiate(coinPrefab, transform.position + new Vector3(p *= -1, p = -p, 0f), Quaternion.identity);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
