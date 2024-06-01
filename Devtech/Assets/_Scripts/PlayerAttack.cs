@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private AimCursor _cursor;
+    [SerializeField] private GameObject _cursor;
     private Vector2 _cursorPosition;
 
     private void Awake()
     {
         _cursorPosition = _cursor.transform.position;
-        _cursor.CursorMovement();
+        _cursor.GetComponent<CursorMovement>().GetQuadrant();
     }
 
     private void Start()
