@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        _movement.Set(InputManager.Movement.x, InputManager.Movement.y);
+        _movement.Set(InputManager2.Movement.x, InputManager2.Movement.y);
 
         _rb.velocity = _movement * _speed;
     }

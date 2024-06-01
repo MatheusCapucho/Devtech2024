@@ -18,7 +18,7 @@ public class CursorMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        _mouseWorldPosition = _mainCamera.ScreenToWorldPoint(InputManager.Instance.MousePosition);
+        _mouseWorldPosition = _mainCamera.ScreenToWorldPoint(InputManager2.Instance.MousePosition);
         _playerPosition = _player.transform.position;
         _direction = _mouseWorldPosition - _playerPosition;
         _direction.Normalize();
