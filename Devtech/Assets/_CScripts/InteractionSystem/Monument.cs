@@ -15,6 +15,7 @@ public class Monument : MonoBehaviour, IInteractable
         if(monumentSO.Restored)
         {
             sr.sprite = monumentSO.restoredImage;
+            //efeitos
         } else
         {
             sr.sprite = monumentSO.brokenImage;
