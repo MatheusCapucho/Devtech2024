@@ -304,6 +304,7 @@ MonoBehaviour:
   - {fileID: 603570524}
   - {fileID: 492091789}
   - {fileID: 1506814141}
+  _attackBoxActiveFrames: 12
 --- !u!1 &106652773
 GameObject:
   m_ObjectHideFlags: 0

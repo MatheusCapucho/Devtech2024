@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackBoxManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _attackBoxes = new List<GameObject>();
+    [SerializeField] private int _attackBoxActiveFrames = 6; // Set this in the inspector
 
     // Start is called before the first frame update
     private void Start()
@@ -22,6 +23,16 @@ public class AttackBoxManager : MonoBehaviour
         if (data is int)
         {
             _attackBoxes[(int)data].SetActive(true);
+            float timeInSeconds = _attackBoxActiveFrames / (1.0f / Time.deltaTime);
+            Invoke("DeactivateHitBox", timeInSeconds);
+        }
+    }
+
+    private void DeactivateHitBox()
+    {
+        foreach (GameObject box in _attackBoxes)
+        {
+            box.SetActive(false);
         }
     }
 }
