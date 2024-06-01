@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
+    [Header("Spawn Related")]
     [SerializeField] private int maxEnemies = 10;
     [SerializeField] private int firstEnemies = 2;
     private int spawnedEnemies = 0;
@@ -19,6 +20,34 @@ public class LevelManager : MonoBehaviour
 
     private Transform[] spawnPoints;
 
+    [Header("Portal Related")]
+    [SerializeField] private GameObject portalPrefab;
+    [SerializeField] private Transform portalSpawnPosition;
+    private int enemiesToBeat;
+
+    public static Action OnEnemyKilled;
+
+    private void OnEnable()
+    {
+        OnEnemyKilled += EnemyKilled;
+
+    }
+
+    private void OnDisable()
+    {
+        OnEnemyKilled -= EnemyKilled;
+
+    }
+
+    private void EnemyKilled()
+    {
+        enemiesToBeat--;
+        if(enemiesToBeat <= 0)
+        {
+            Instantiate(portalPrefab, portalSpawnPosition);
+        }
+    }
+
     private void Awake()
     {
         spawnPoints = new Transform[transform.childCount];
@@ -31,6 +60,7 @@ public class LevelManager : MonoBehaviour
         {
             totalWeight += enemiesSpawnWeight[i];
         }
+        enemiesToBeat = maxEnemies;
 
     }
 
@@ -56,8 +86,8 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnRandomEnemy()
     {
-        var rng = Random.Range(0, totalWeight);
-        var pointRng = Random.Range(0, spawnPoints.Length);
+        var rng = UnityEngine.Random.Range(0, totalWeight);
+        var pointRng = UnityEngine.Random.Range(0, spawnPoints.Length);
         int totalPossibilities = enemiesPrefab.Length;
         int it = totalPossibilities;
 

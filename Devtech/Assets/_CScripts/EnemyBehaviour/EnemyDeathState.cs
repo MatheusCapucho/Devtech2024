@@ -36,6 +36,7 @@ public class EnemyDeathState : EnemyBaseState
     public override void Die(EnemyStateMachine stateMachine)
     {
         stateMachine.InstantiateLoot();
+        LevelManager.OnEnemyKilled?.Invoke();
         Object.Destroy(stateMachine.gameObject);
     }
 }
