@@ -11,14 +11,22 @@ public class PlayerHealthSystemUI : MonoBehaviour
 
     [SerializeField] private Sprite lifeSprite;
     [SerializeField] private Sprite damageSprite;
+    [SerializeField] private MonumentSO lifeMonument;
 
     private void Awake()
     {
+
+        if (lifeMonument.Restored)
+        {
+            transform.GetChild(3).gameObject.SetActive(true);
+        }
         images = GetComponentsInChildren<Image>();
+
         foreach (Image image in images)
         {
             image.sprite = lifeSprite;
         }
+      
     }
 
     private void OnEnable()

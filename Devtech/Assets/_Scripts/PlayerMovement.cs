@@ -5,10 +5,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed = 5f;
     private Vector2 _movement;
     private Rigidbody2D _rb;
+    [SerializeField] private MonumentSO speedMonument;
 
     // Start is called before the first frame update
     private void Awake()
     {
+        if (speedMonument.Restored)
+            _speed++;
         _rb = GetComponent<Rigidbody2D>();
     }
 
