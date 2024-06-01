@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMeleeAttack : MonoBehaviour, IEnemyAttack
+public class EnemyRangedAttack : MonoBehaviour, IEnemyAttack
 {
-
     private Transform attackDirectionPivot;
     private Transform playerTransForm;
+
+    [SerializeField] private GameObject bulletPrefab;
 
     private void Awake()
     {
@@ -21,9 +22,8 @@ public class EnemyMeleeAttack : MonoBehaviour, IEnemyAttack
     }
     public void Attack(int dmg)
     {
-        //attack animation
-        playerTransForm.GetComponent<PlayerHealthSystem>().TakeDamage(dmg);
+        Instantiate(bulletPrefab, attackDirectionPivot.GetChild(0).transform.position, attackDirectionPivot.rotation);
 
     }
-
 }
+

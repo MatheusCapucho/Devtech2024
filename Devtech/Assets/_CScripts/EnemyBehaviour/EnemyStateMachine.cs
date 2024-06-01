@@ -9,6 +9,7 @@ public class EnemyStateMachine : MonoBehaviour
     [Header("EnemyAttributes")]
     public float Velocity = 1f;
     public float AttackCD = .5f;
+    public int AttackDamage = 1;
     public float Range = .3f;
     public LayerMask ObstacleMask;
 
