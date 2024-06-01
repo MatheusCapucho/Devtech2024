@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2853755759805230833}
-  OnAttackPerformed: {fileID: 0}
+  OnAttackPerformed: {fileID: 11400000, guid: ae9c8412823d8674fafef9da0da58563, type: 2}
 --- !u!114 &3363748011824861283
 MonoBehaviour:
   m_ObjectHideFlags: 0
