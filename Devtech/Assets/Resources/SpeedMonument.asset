@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b12a36d2d4a649d439e2fd935f771d49, type: 3}
-  m_Name: TestMonument
+  m_Name: SpeedMonument
   m_EditorClassIdentifier: 
-  upgradeCost: 500
+  upgradeCost: 200
   Restored: 0
   brokenImage: {fileID: 0}
   restoredImage: {fileID: 0}

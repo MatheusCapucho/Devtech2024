@@ -10,10 +10,15 @@ public class PlayerHealthSystem : MonoBehaviour, ITakeDamage
     [SerializeField]
     private float invulnerabilityTime = .5f;
 
+    [SerializeField] private MonumentSO lifeMonument;
+
     private bool playerCanTakeDamage = true;
 
     void Awake()
     {
+        if (lifeMonument.Restored)
+            maxHealth++;
+
         currentHealth = maxHealth;
     }
 
