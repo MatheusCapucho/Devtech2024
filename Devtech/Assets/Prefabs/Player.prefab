@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2747528370441613080}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  speedMonument: {fileID: 11400000, guid: 217f932842b44b24799fa470e5a3e6cd, type: 2}
 --- !u!114 &9142564827275892663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   invulnerabilityTime: 0.5
+  lifeMonument: {fileID: 11400000, guid: d884c0d70f97f13489e4eb7d1cff8ed1, type: 2}
 --- !u!114 &2747528370441613080
 MonoBehaviour:
   m_ObjectHideFlags: 0

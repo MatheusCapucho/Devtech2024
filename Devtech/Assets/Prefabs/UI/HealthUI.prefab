@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeSprite: {fileID: 21300000, guid: 342d92424652e0543a552e24d367123f, type: 3}
   damageSprite: {fileID: 21300000, guid: 0ce736b246e54ad409b4eca5e6e70a03, type: 3}
+  lifeMonument: {fileID: 11400000, guid: d884c0d70f97f13489e4eb7d1cff8ed1, type: 2}
 --- !u!1 &7500952946381333239
 GameObject:
   m_ObjectHideFlags: 0
