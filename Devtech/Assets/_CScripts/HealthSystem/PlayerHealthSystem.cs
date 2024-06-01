@@ -17,6 +17,7 @@ public class PlayerHealthSystem : MonoBehaviour, ITakeDamage
     {
         currentHealth -= amount;
         PlayerHealthSystemUI.OnHealthChanged?.Invoke(currentHealth);
+        Debug.Log(currentHealth + " current ");
         if (currentHealth <= 0)
             Die();
     }
@@ -29,6 +30,7 @@ public class PlayerHealthSystem : MonoBehaviour, ITakeDamage
         
         PlayerHealthSystemUI.OnHealthChanged?.Invoke(currentHealth);
     }
+
 
     private void Die()
     {

@@ -14,7 +14,7 @@ public class EnemyAttackState : EnemyBaseState
         cooldown += Time.deltaTime;
         if (cooldown >= stateMachine.AttackCD)
         {
-            stateMachine.GetComponent<IEnemyAttack>().Attack();
+            stateMachine.GetComponent<IEnemyAttack>().Attack(stateMachine.AttackDamage);
             cooldown = 0f;
             stateMachine.ChangeState(stateMachine.chaseState);
         }

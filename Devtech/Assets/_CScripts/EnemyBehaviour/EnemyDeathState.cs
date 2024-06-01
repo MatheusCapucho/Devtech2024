@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class EnemyDeathState : EnemyBaseState
 {
+    private float dieAnimationTimer;
     public override void EnterState(EnemyStateMachine stateMachine)
     {
-
+        //dieAnimationTimer = tempo de anim
+        //startAnimion
     }
     public override void UpdateState(EnemyStateMachine stateMachine)
     {
-
+        dieAnimationTimer -= Time.deltaTime;
+        if (dieAnimationTimer < 0)
+        {
+            Die(stateMachine);
+        }
     }
     public override void ExitState(EnemyStateMachine stateMachine)
     {
@@ -29,6 +35,6 @@ public class EnemyDeathState : EnemyBaseState
 
     public override void Die(EnemyStateMachine stateMachine)
     {
-
+        Object.Destroy(stateMachine.gameObject);
     }
 }
