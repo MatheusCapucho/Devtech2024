@@ -14,6 +14,10 @@ public class EnemyChaseState : EnemyBaseState
     public override void UpdateState(EnemyStateMachine stateMachine)
     {
         stateMachine.NavMeshAgent.SetDestination(target.position);
+
+        if (Vector3.Distance(stateMachine.transform.position, target.position) <= stateMachine.Range)
+            stateMachine.ChangeState(stateMachine.attackState);
+
     }     
     public override void ExitState(EnemyStateMachine stateMachine)
     {
@@ -22,7 +26,7 @@ public class EnemyChaseState : EnemyBaseState
 
     public override void CollisionEnter(EnemyStateMachine stateMachine, Collision2D other)
     {
-        
+    
     }
 
     public override void CollisionExit(EnemyStateMachine stateMachine, Collision2D other)

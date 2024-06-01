@@ -723,6 +723,7 @@ GameObject:
   - component: {fileID: 1863256341}
   - component: {fileID: 1863256340}
   - component: {fileID: 1863256343}
+  - component: {fileID: 1863256344}
   m_Layer: 0
   m_Name: Enemy-Generic
   m_TagString: Untagged
@@ -829,6 +830,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50f98ec4865568c4f977ece49146035e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Velocity: 1
+  AttackCD: 0.5
+  Range: 1.5
+--- !u!114 &1863256344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863256339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829631505074a904299044911e797a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2048446821
