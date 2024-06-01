@@ -32,7 +32,7 @@ public class PlayerInteraction : MonoBehaviour
             return;
 
         currentInteractable = collider2Ds.GetComponent<IInteractable>();
-        currentInteractable?.Interact(1); // coins value
+        currentInteractable?.Interact(CurrencyManager.TotalCoins); // coins value
 
     }
 
