@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class EnemyAttackState : EnemyBaseState
 {
-    private bool alreadyAttacked = false;
     private float cooldown = 0f;
     public override void EnterState(EnemyStateMachine stateMachine)
     {
-        alreadyAttacked = false;
+        
     }
     public override void UpdateState(EnemyStateMachine stateMachine)
     {

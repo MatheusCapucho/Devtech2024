@@ -10,6 +10,7 @@ public class EnemyStateMachine : MonoBehaviour
     public float Velocity = 1f;
     public float AttackCD = .5f;
     public float Range = .3f;
+    public LayerMask ObstacleMask;
 
     private EnemyBaseState currentState;
     public EnemyChaseState chaseState = new EnemyChaseState();
@@ -46,6 +47,12 @@ public class EnemyStateMachine : MonoBehaviour
         currentState.ExitState(this);
         currentState = nextState;
         currentState.EnterState(this);
+    }
+
+    public bool CheckLOS()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, (playerTransform.position - transform.position).normalized, Range, ObstacleMask);
+        return (hit.collider != null) ? false : true;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
