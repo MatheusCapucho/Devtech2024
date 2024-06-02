@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movement;
     private Rigidbody2D _rb;
     [SerializeField] private MonumentSO speedMonument;
+    private SpriteRenderer _sprRend;
 
     // Start is called before the first frame update
     private void Awake()
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
         if (speedMonument.Restored)
             _speed++;
         _rb = GetComponent<Rigidbody2D>();
+        _sprRend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -21,5 +23,13 @@ public class PlayerMovement : MonoBehaviour
         _movement.Set(InputManager2.Movement.x, InputManager2.Movement.y);
 
         _rb.velocity = _movement * _speed;
+
+        if((_rb.velocity.x < 0))
+        {
+           _sprRend.flipX = true;
+        }else
+        {
+            _sprRend.flipX = false;
+        }
     }
 }
