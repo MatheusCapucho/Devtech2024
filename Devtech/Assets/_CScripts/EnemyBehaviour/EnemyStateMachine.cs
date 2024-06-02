@@ -26,9 +26,11 @@ public class EnemyStateMachine : MonoBehaviour
     private Transform playerTransform;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     public Transform PlayerTransform => playerTransform;
     public NavMeshAgent NavMeshAgent => navMeshAgent;
     public Animator Animator => animator;
+    public SpriteRenderer SpriteRenderer => spriteRenderer;
 
 
     private void Awake()
@@ -38,6 +40,7 @@ public class EnemyStateMachine : MonoBehaviour
         navMeshAgent.updateUpAxis = false;
         navMeshAgent.updateRotation = false;
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Start()
     {
