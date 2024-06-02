@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyDeathState : EnemyBaseState
 {
-    private float dieAnimationTimer;
+    private float dieAnimationTimer = 0;
     public override void EnterState(EnemyStateMachine stateMachine)
     {
         //dieAnimationTimer = tempo de anim
@@ -13,7 +13,7 @@ public class EnemyDeathState : EnemyBaseState
     public override void UpdateState(EnemyStateMachine stateMachine)
     {
         dieAnimationTimer -= Time.deltaTime;
-        if (dieAnimationTimer < 0)
+        if (dieAnimationTimer <= 0)
         {
             Die(stateMachine);
         }
