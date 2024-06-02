@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tilesetwalldungeon
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 447f06e2a4114404c85345338c1e1ca5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.7644164, b: 0.34109113, a: 1}
   m_Transform:
     e00: 1
     e01: 0
