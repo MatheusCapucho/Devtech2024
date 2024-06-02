@@ -7,7 +7,6 @@ public class EnemyAttackState : EnemyBaseState
     private float cooldown = 0f;
     public override void EnterState(EnemyStateMachine stateMachine)
     {
-        
     }
     public override void UpdateState(EnemyStateMachine stateMachine)
     {
@@ -15,6 +14,8 @@ public class EnemyAttackState : EnemyBaseState
         if (cooldown >= stateMachine.AttackCD)
         {
             stateMachine.GetComponent<IEnemyAttack>().Attack(stateMachine.AttackDamage);
+            
+            stateMachine.Animator.Play("Attack");
             cooldown = 0f;
             stateMachine.ChangeState(stateMachine.chaseState);
         }

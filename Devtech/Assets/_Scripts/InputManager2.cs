@@ -28,6 +28,10 @@ public class InputManager2 : MonoBehaviour
 
     private void OnEnable()
     {
+        if (_playerAttack == null)
+        {
+            _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
+        }
         _attackAction.performed += AttackActionPerformed;
     }
 
@@ -50,7 +54,7 @@ public class InputManager2 : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this.gameObject);
         }
         else if (Instance != this)
         {

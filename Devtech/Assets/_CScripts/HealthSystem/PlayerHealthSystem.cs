@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthSystem : MonoBehaviour, ITakeDamage
 {
@@ -45,8 +46,16 @@ public class PlayerHealthSystem : MonoBehaviour, ITakeDamage
     }
     private void Die()
     {
-        // die
+        GameObject.Find("Fade").GetComponent<Fade>().FadeIn();
+        StartCoroutine(DieCR());
+        
+    }
+
+    IEnumerator DieCR()
+    {
         // startcoroutine: animation dying, fade out , UI, changescene
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("MainHUB");
     }
 
     IEnumerator InvulnerabilityFrames()

@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 3865089322570427378}
   - component: {fileID: 2323100273186448735}
   - component: {fileID: 5268216092354772213}
+  - component: {fileID: 4588274289759632158}
   m_Layer: 8
   m_Name: Enemy-Melee
   m_TagString: Enemy
@@ -188,6 +189,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829631505074a904299044911e797a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4588274289759632158
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5082935845983454775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eee89f63a0ec96045a5e1d4da4192dd4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8809458516899030802
 GameObject:
   m_ObjectHideFlags: 0
