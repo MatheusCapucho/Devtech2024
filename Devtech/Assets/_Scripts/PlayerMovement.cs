@@ -24,12 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
         _rb.velocity = _movement * _speed;
 
-        if((_rb.velocity.x < 0))
-        {
-           _sprRend.flipX = true;
-        }else
-        {
-            _sprRend.flipX = false;
-        }
+        
     }
 }

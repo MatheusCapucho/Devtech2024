@@ -103,6 +103,8 @@ public class InputManager2 : MonoBehaviour
 
         Interact = _interactAction.triggered;
 
+        Attack = _attackAction.triggered;
+
         Skill1 = _skillAction1.triggered;
         Skill2 = _skillAction2.triggered;
         Skill3 = _skillAction3.triggered;
