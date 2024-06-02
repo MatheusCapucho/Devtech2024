@@ -26,6 +26,7 @@ public class PlayerSkills : MonoBehaviour
 
     private void ActivateSkill(int index)
     {
-        _skillList[index].Activate();
+        if (_skillList[index] != null)
+            _skillList[index].Activate();
     }
 }
