@@ -26,18 +26,7 @@ public class InputManager2 : MonoBehaviour
     [SerializeField] private PlayerAttack _playerAttack;
     public PlayerAttack PlayerAttack => _playerAttack;
 
-    //Animator
-    private Animator _anim;
-    [SerializeField] private float _magicAnimDuration = 0.1f;
-    [SerializeField] private float _attackAnimTime = 0.1f;
-
-    private float _lockedTill;
-    private int _currentState;
-
-    private static readonly int Idle = Animator.StringToHash("Isis_idle");
-    private static readonly int Run = Animator.StringToHash("Isis_running");
-    private static readonly int Magic = Animator.StringToHash("Isis_magic_front");
-    private static readonly int Punch = Animator.StringToHash("Isis_punch");
+    
     private void OnEnable()
     {
         if (_playerAttack == null)
@@ -84,7 +73,7 @@ public class InputManager2 : MonoBehaviour
         _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
 
 
-        _anim = GameObject.Find("Player").GetComponent<Animator>();
+        
     }
 
     private void Start()
@@ -109,32 +98,12 @@ public class InputManager2 : MonoBehaviour
         Skill2 = _skillAction2.triggered;
         Skill3 = _skillAction3.triggered;
 
-        //aniamtion
-        var state = GetState();
-        if (state == _currentState) return;
-        _anim.CrossFade(state, 0, 0);
-        _currentState = state;
+        
 
        
 
     }
-    //aniamtion pegar stado
-    private int GetState()
-    {
-        if (Time.time < _lockedTill) return _currentState;
-
-        if (_attackAction.triggered) return LockState(Punch, _attackAnimTime);
-        if (Skill2) return LockState(Magic,_magicAnimDuration);
-        if (Movement != new Vector2(0, 0)) return Run;
-        else return Idle;
-
-
-       
-    }
-    int LockState(int s, float t)
-    {
-        _lockedTill = Time.time + t;
-        return s;
-    }
+    
+   
 
 }
