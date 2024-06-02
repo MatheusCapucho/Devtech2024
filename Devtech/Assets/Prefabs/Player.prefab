@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 2747528370441613080}
   - component: {fileID: 7364272323678073607}
   - component: {fileID: 701172191447612614}
+  - component: {fileID: 1424478129469029264}
   - component: {fileID: 3440384769080539938}
   - component: {fileID: 8345233402568753971}
   m_Layer: 0
@@ -407,6 +408,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1424478129469029264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171534078019427423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409269ec7221bcf45b68009b5967e969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cursor: {fileID: 2853755759805230833}
+  _magicAnimDuration: 0.6
+  _attackAnimTime: 0.2
 --- !u!95 &3440384769080539938
 Animator:
   serializedVersion: 5
