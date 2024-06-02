@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fadee1485229334387556468b8bf64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMonument: {fileID: 11400000, guid: 3259d4795fcc8374e861df9159284491, type: 2}
 --- !u!1 &1171534078019427423
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,6 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fadee1485229334387556468b8bf64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageMonument: {fileID: 11400000, guid: 3259d4795fcc8374e861df9159284491, type: 2}
 --- !u!114 &8641843631682794268
 MonoBehaviour:
   m_ObjectHideFlags: 0
