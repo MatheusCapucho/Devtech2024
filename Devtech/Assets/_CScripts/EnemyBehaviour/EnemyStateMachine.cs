@@ -25,8 +25,10 @@ public class EnemyStateMachine : MonoBehaviour
 
     private Transform playerTransform;
     private NavMeshAgent navMeshAgent;
+    private Animator animator;
     public Transform PlayerTransform => playerTransform;
     public NavMeshAgent NavMeshAgent => navMeshAgent;
+    public Animator Animator => animator;
 
 
     private void Awake()
@@ -35,6 +37,7 @@ public class EnemyStateMachine : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.updateUpAxis = false;
         navMeshAgent.updateRotation = false;
+        animator = GetComponent<Animator>();
     }
     private void Start()
     {
