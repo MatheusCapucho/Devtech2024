@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9160934842786183129}
   - component: {fileID: 8392270448910252315}
   - component: {fileID: 4101734537478478639}
+  - component: {fileID: 9083193824268830416}
   m_Layer: 9
   m_Name: MonumentCooldown
   m_TagString: Untagged
@@ -144,3 +145,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9083193824268830416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4659009029526714040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7459e774a0eb9a43952014200d84d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltipText: CDR
+  tooltipCost: 200

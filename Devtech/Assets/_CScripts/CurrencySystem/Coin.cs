@@ -20,6 +20,7 @@ public class Coin : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             CurrencyManager.AddCoins(1);
+            CurrencyManagerUI.OnCoinCollected?.Invoke();
             Destroy(gameObject);
         }
     }
