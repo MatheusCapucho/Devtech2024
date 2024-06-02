@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: tilesetwallluzmenor
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 45672d9208b4983429c7b0b3d9783257, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6132076, g: 0.47080198, b: 0.25743148, a: 1}
   m_Transform:
     e00: 1
     e01: 0
