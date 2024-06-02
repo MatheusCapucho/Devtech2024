@@ -17,7 +17,7 @@ public class Tooltip : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.CompareTag("Tooltip"))
         {
             textComponent.text = tooltipText + "\n" + tooltipCost;
         }
