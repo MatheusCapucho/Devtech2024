@@ -63,7 +63,7 @@ MonoBehaviour:
   enemiesPrefab:
   - {fileID: 5082935845983454775, guid: 4a1c7d1e295e14445a678fe4b9bd9c98, type: 3}
   - {fileID: 1415692426201970350, guid: c939452af0e3d994198a680d45f4e773, type: 3}
-  enemiesSpawnWeight: 0300000007000000
+  enemiesSpawnWeight: 0500000005000000
   portalPrefab: {fileID: 3683429797302181871, guid: 1917e59af8b038a47af6d8b6f9172978, type: 3}
   portalSpawnPosition: {fileID: 3209246582346701207}
 --- !u!1 &1023437754309836370
