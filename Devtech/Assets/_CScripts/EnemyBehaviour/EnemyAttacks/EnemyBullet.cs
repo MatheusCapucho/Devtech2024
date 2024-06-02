@@ -28,10 +28,11 @@ public class EnemyBullet : MonoBehaviour
         {
             collision.GetComponent<PlayerHealthSystem>().TakeDamage(damage);
             DestroyProjectile();
-        } else if(!collision.gameObject.CompareTag("Enemy") && !collision.gameObject.CompareTag("Tooltip"))
-        {
-            DestroyProjectile();
         }
+
+        if (collision.gameObject.CompareTag("Tooltip"))
+            DestroyProjectile();
+
     }
 
     private void DestroyProjectile()
