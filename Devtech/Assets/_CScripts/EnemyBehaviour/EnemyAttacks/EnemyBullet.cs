@@ -28,7 +28,7 @@ public class EnemyBullet : MonoBehaviour
         {
             collision.GetComponent<PlayerHealthSystem>().TakeDamage(damage);
             DestroyProjectile();
-        } else if(!collision.gameObject.CompareTag("Enemy"))
+        } else if(!collision.gameObject.CompareTag("Enemy") && !collision.gameObject.CompareTag("Tooltip"))
         {
             DestroyProjectile();
         }
