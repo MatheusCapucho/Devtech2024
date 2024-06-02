@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d6fa4809768f4e459c8c401c891b829, type: 3}
   m_Name: SkillTeste
   m_EditorClassIdentifier: 
+  _name: Skill Teste 1
+  cooldownTime: 5

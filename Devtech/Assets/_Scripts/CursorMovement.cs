@@ -41,21 +41,21 @@ public class CursorMovement : MonoBehaviour
             adjustedAngle += 2 * Mathf.PI;
         }
 
-        if (adjustedAngle >= Mathf.PI / 4 && adjustedAngle < 3 * Mathf.PI / 4)
+        if (adjustedAngle >= 0 && adjustedAngle < Mathf.PI / 2 || adjustedAngle >= 3 * Mathf.PI / 2)
         {
             return 0;
         }
-        else if (adjustedAngle >= 3 * Mathf.PI / 4 && adjustedAngle < 5 * Mathf.PI / 4)
+        else /*if (adjustedAngle >= 3 * Mathf.PI / 4 && adjustedAngle < 5 * Mathf.PI / 4)*/
         {
             return 1;
         }
-        else if (adjustedAngle >= 5 * Mathf.PI / 4 && adjustedAngle < 7 * Mathf.PI / 4)
-        {
-            return 2;
-        }
-        else // adjustedAngle >= 7 * Mathf.PI / 4 or adjustedAngle < Mathf.PI / 4
-        {
-            return 3;
-        }
+        //else if (adjustedAngle >= 5 * Mathf.PI / 4 && adjustedAngle < 7 * Mathf.PI / 4)
+        //{
+        //    return 2;
+        //}
+        //else // adjustedAngle >= 7 * Mathf.PI / 4 or adjustedAngle < Mathf.PI / 4
+        //{
+        //    return 3;
+        //}
     }
 }
