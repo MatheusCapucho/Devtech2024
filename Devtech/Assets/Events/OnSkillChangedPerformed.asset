@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d6fa4809768f4e459c8c401c891b829, type: 3}
-  m_Name: SkillTeste
+  m_Script: {fileID: 11500000, guid: 0b0b4dfac72001d45aae779b2481ac8e, type: 3}
+  m_Name: OnSkillChangedPerformed
   m_EditorClassIdentifier: 
-  _name: Skill Teste 1
-  cooldownTime: 5
+  listeners: []
