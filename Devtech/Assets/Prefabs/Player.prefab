@@ -328,6 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cursor: {fileID: 2853755759805230833}
+  _magicAnimDuration: 0.6
+  _attackAnimTime: 0.2
 --- !u!1 &2387003970703190100
 GameObject:
   m_ObjectHideFlags: 0
