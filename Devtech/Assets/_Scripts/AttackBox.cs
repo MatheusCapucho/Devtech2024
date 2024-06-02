@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class AttackBox : MonoBehaviour
 {
+    private int dmg = 1;
+
+    [SerializeField] private MonumentSO damageMonument;
+
+    private void Awake()
+    {
+        if(damageMonument.Restored)
+        {
+            dmg =2;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision detected");
@@ -11,7 +22,7 @@ public class AttackBox : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("Hit enemy");
-            collision.gameObject.GetComponent<EnemyHealthSystem>().TakeDamage(1);
+            collision.gameObject.GetComponent<EnemyHealthSystem>().TakeDamage(dmg);
         }
     }
 }
