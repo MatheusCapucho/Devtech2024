@@ -57,8 +57,17 @@ public class InputManager2 : MonoBehaviour
         _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
     }
 
+    private void Start()
+    {
+        _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
+    }
+
     private void Update()
     {
+        if(_playerAttack == null) 
+        { 
+            _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
+        }
         Movement = _moveAction.ReadValue<Vector2>();
         MousePosition = Mouse.current.position.ReadValue();
        
