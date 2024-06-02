@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LifeMonument
   m_EditorClassIdentifier: 
   upgradeCost: 200
-  Restored: 0
-  brokenImage: {fileID: 0}
-  restoredImage: {fileID: 0}
+  Restored: 1
+  brokenImage: {fileID: 21300000, guid: 1c87946e4c7144348bc82e2875e14776, type: 3}
+  restoredImage: {fileID: 21300000, guid: 0a6ef84f1f6454d45aab41ea84fed7fc, type: 3}
