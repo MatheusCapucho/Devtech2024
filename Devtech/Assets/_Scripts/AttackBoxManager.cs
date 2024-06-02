@@ -19,7 +19,6 @@ public class AttackBoxManager : MonoBehaviour
 
     public void ActivateHitBox(Component sender, object data)
     {
-        Debug.Log("Ativou a caixa de colisão" + data);
         if (data is int)
         {
             _attackBoxes[(int)data].SetActive(true);

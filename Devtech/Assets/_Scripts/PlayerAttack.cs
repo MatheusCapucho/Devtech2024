@@ -28,7 +28,6 @@ public class PlayerAttack : MonoBehaviour
     public void AttackPerformed()
     {
         int quadrant = _cursor.GetComponent<CursorMovement>().GetQuadrant();
-        Debug.Log("Quadrant: " + quadrant);
         OnAttackPerformed.Raise(this, quadrant);
     }
 }

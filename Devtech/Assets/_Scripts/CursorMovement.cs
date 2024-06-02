@@ -35,7 +35,6 @@ public class CursorMovement : MonoBehaviour
     public int GetQuadrant()
     {
         float adjustedAngle = _angle;
-        Debug.Log("Angle: " + adjustedAngle);
         if (adjustedAngle < 0)
         {
             adjustedAngle += 2 * Mathf.PI;

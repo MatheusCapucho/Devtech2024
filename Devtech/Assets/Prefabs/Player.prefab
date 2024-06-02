@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 9142564827275892663}
   - component: {fileID: 3363748011824861283}
   - component: {fileID: 2747528370441613080}
+  - component: {fileID: 7364272323678073607}
+  - component: {fileID: 701172191447612614}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -292,6 +294,50 @@ MonoBehaviour:
   interactionMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &7364272323678073607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171534078019427423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2712d5558345c9d4990c03c57b08a2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skillList:
+  - {fileID: 11400000, guid: 40a12733f6629d9439b4ac219eb5ed78, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &701172191447612614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171534078019427423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d28701a64fd7ce49a16bc0a9644ab24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: b90b4cc5f8b784441ba20f5ecfd3d2cb, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7364272323678073607}
+        m_TargetAssemblyTypeName: PlayerSkills, Assembly-CSharp
+        m_MethodName: ChangeSkill
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2387003970703190100
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,10 +388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackBoxes:
-  - {fileID: 3113700688380139717}
-  - {fileID: 1087526063849876918}
-  - {fileID: 7085087873529433922}
   - {fileID: 7359007792823573374}
+  - {fileID: 1087526063849876918}
   _attackBoxActiveFrames: 12
 --- !u!114 &5434963319238321075
 MonoBehaviour:

@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "GameEvent")]
 public class GameEvent : ScriptableObject
 {
-   public List<GameEventListener> listeners = new List<GameEventListener>();
+    public List<GameEventListener> listeners = new List<GameEventListener>();
 
     //Raise event through different methods signatures
 
@@ -23,10 +23,9 @@ public class GameEvent : ScriptableObject
             listeners.Add(listener);
     }
 
-    public void UnregisterListener(GameEventListener listener) 
-    { 
-        if(listeners.Contains(listener))
+    public void UnregisterListener(GameEventListener listener)
+    {
+        if (listeners.Contains(listener))
             listeners.Remove(listener);
-    
     }
 }
