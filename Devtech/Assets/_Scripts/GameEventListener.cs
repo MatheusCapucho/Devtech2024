@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 //  usa Component em vez de MonoBehaviour porque é mais genérico ainda
 //  System.Serializable pra ver dentro do Inspetor
 [System.Serializable]
-public class CustomGameEvent : UnityEvent<Component, object> { }
+public class CustomGameEvent : UnityEvent<Component, object>
+{ }
 
 [System.Serializable]
-public class CustomGameEventNoData : UnityEvent<Component> { }
+public class CustomGameEventNoData : UnityEvent<Component>
+{ }
 
 public class GameEventListener : MonoBehaviour
 {
