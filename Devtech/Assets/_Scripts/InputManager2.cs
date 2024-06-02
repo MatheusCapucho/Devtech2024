@@ -26,7 +26,6 @@ public class InputManager2 : MonoBehaviour
     [SerializeField] private PlayerAttack _playerAttack;
     public PlayerAttack PlayerAttack => _playerAttack;
 
-    
     private void OnEnable()
     {
         if (_playerAttack == null)
@@ -46,7 +45,6 @@ public class InputManager2 : MonoBehaviour
         if (_playerAttack != null)
         {
             _playerAttack.AttackPerformed();
-            Debug.Log("atacou");
         }
     }
 
@@ -71,9 +69,6 @@ public class InputManager2 : MonoBehaviour
         _skillAction2 = _playerInput.actions["Skill2"];
         _skillAction3 = _playerInput.actions["Skill3"];
         _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
-
-
-        
     }
 
     private void Start()
@@ -83,8 +78,8 @@ public class InputManager2 : MonoBehaviour
 
     private void Update()
     {
-        if(_playerAttack == null) 
-        { 
+        if (_playerAttack == null)
+        {
             _playerAttack = GameObject.Find("Player").GetComponent<PlayerAttack>();
         }
         Movement = _moveAction.ReadValue<Vector2>();
@@ -97,13 +92,5 @@ public class InputManager2 : MonoBehaviour
         Skill1 = _skillAction1.triggered;
         Skill2 = _skillAction2.triggered;
         Skill3 = _skillAction3.triggered;
-
-        
-
-       
-
     }
-    
-   
-
 }
