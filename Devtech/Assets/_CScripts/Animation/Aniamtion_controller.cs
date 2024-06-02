@@ -55,6 +55,7 @@ private int GetState()
 
     if (InputManager2.Attack) return LockState(Punch, _attackAnimTime);
     if (InputManager2.Skill2) return LockState(Magic, _magicAnimDuration);
+    if ((InputManager2.Movement != new Vector2(0, 0))) return Run;
     else return Idle;
 
 
