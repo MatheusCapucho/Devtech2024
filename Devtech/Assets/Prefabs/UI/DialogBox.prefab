@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ffe753f1d93f1c8408835374293ea71a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
   - Testando o dialogo pra ver se funciona
   - vai dar tudo certo
   - termonou
-  textSpeed: 0.8
+  textSpeed: 0.1
 --- !u!1 &7506098128127010527
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,8 +129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.9662, y: -2.8982}
-  m_SizeDelta: {x: 712.0264, y: 214.2348}
+  m_AnchoredPosition: {x: -167.99625, y: -86.41315}
+  m_SizeDelta: {x: 662.2727, y: 132.4967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5013583784872255312
 CanvasRenderer:
@@ -162,8 +162,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8e8445f5b4275924baff2b6f164b8d1f, type: 2}
+  m_sharedMaterial: {fileID: 4544128888835115189, guid: 8e8445f5b4275924baff2b6f164b8d1f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
