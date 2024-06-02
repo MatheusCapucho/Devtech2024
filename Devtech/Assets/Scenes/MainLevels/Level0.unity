@@ -802,7 +802,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.0868816, y: 1.40046, z: -10}
+  m_LocalPosition: {x: 2.0867982, y: 1.40046, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4681,6 +4681,7 @@ RectTransform:
   m_Children:
   - {fileID: 1223174597}
   - {fileID: 1514430762}
+  - {fileID: 1729163705}
   - {fileID: 2102143982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5211,6 +5212,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!224 &1729163705 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+  m_PrefabInstance: {fileID: 1915150688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1737966251
 GameObject:
   m_ObjectHideFlags: 0
@@ -5256,6 +5262,103 @@ Transform:
   - {fileID: 949397871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1915150688
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1356312896}
+    m_Modifications:
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 765.992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 155.734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503540349487331008, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495853280015149927, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
+      propertyPath: m_Name
+      value: Tooltip
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73d638baad40a294bb4067569e65dd55, type: 3}
 --- !u!1 &2015090976
 GameObject:
   m_ObjectHideFlags: 0
@@ -6368,6 +6471,14 @@ PrefabInstance:
     - target: {fileID: 4748752663445110035, guid: 7fb083e9db8d0904aaaca5202aeb8439, type: 3}
       propertyPath: m_LocalPosition.y
       value: 9.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773870979955343652, guid: 7fb083e9db8d0904aaaca5202aeb8439, type: 3}
+      propertyPath: maxEnemies
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773870979955343652, guid: 7fb083e9db8d0904aaaca5202aeb8439, type: 3}
+      propertyPath: firstEnemies
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6820567385276675775, guid: 7fb083e9db8d0904aaaca5202aeb8439, type: 3}
       propertyPath: m_LocalPosition.y
